@@ -153,8 +153,8 @@ export function caseStudiesPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Ready to Achieve <span class="text-gradient">Compliance Certainty?</span></h2>
             <p class="cta-subtitle text-body-lg">Partner with XecureAI to fast-track your ISO 27001, SOC 2, or AI Governance initiative.</p>
-            <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:support@xecureai.com?subject=Case Study Consultation - XecureAI" class="btn btn-glass btn-lg">
+            <div class="cta-actions">
+              <a href="mailto:support@xecureai.com?subject=Case Study Consultation - XecureAI" class="btn btn-primary btn-lg">
                 Schedule Advisory Call
                 ${icon('arrowRight', 18)}
               </a>

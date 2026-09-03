@@ -136,11 +136,12 @@ export function careerPage() {
           <div class="glow-shape glow-shape--purple" style="width:300px;height:300px;top:-20%;left:30%;"></div>
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Don't See Your <span class="text-gradient-purple">Exact Match?</span></h2>
-            <p class="cta-subtitle text-body-lg">We are always eager to connect with exceptional GRC auditors, AI ethicists, and cybersecurity engineers. Send us your CV.</p>
-            <a href="mailto:support@xecureai.com?subject=General Career Inquiry - XecureAI" class="btn btn-glass btn-lg">
-              Submit General Application
-              ${icon('arrowRight', 18)}
-            </a>
+            <div class="cta-actions">
+              <a href="mailto:support@xecureai.com?subject=General Career Inquiry - XecureAI" class="btn btn-primary btn-lg">
+                Submit General Application
+                ${icon('arrowRight', 18)}
+              </a>
+            </div>
           </div>
         </div>
       </div>

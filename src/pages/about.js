@@ -139,8 +139,8 @@ export function aboutPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Partner with <span class="text-gradient">XecureAI</span></h2>
             <p class="cta-subtitle text-body-lg">Let our seasoned GRC, AI governance, and cybersecurity consultants help you navigate audits and build lasting trust.</p>
-            <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:support@xecureai.com?subject=Consultation Inquiry - XecureAI About" class="btn btn-glass btn-lg">
+            <div class="cta-actions">
+              <a href="mailto:support@xecureai.com?subject=Consultation Inquiry - XecureAI About" class="btn btn-primary btn-lg">
                 Schedule a Consultation
                 ${icon('arrowRight', 18)}
               </a>

@@ -186,8 +186,8 @@ export function servicesPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Need Guidance on Your <span class="text-gradient">Audit or AI Strategy</span>?</h2>
             <p class="cta-subtitle text-body-lg">Schedule a consultation with our GRC and AI security consultants to benchmark your posture and define your roadmap.</p>
-            <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:support@xecureai.com?subject=Consultation Request: Services" class="btn btn-glass btn-lg">
+            <div class="cta-actions">
+              <a href="mailto:support@xecureai.com?subject=Consultation Request: Services" class="btn btn-primary btn-lg">
                 Schedule Advisory Call
                 ${icon('arrowRight', 18)}
               </a>

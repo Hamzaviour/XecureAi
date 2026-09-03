@@ -284,8 +284,8 @@ export function homePage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Ready to Elevate Your <span class="text-gradient">GRC & Security</span> Posture?</h2>
             <p class="cta-subtitle text-body-lg">Partner with XecureAI to manage cyber risk, achieve audit certification, strengthen security controls, and govern enterprise AI responsibly.</p>
-            <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:support@xecureai.com?subject=Consultation Inquiry - XecureAI" class="btn btn-glass btn-lg">
+            <div class="cta-actions">
+              <a href="mailto:support@xecureai.com?subject=Consultation Inquiry - XecureAI" class="btn btn-primary btn-lg">
                 Schedule a Consultation
                 ${icon('arrowRight', 18)}
               </a>
