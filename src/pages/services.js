@@ -8,6 +8,7 @@ const services = [
   {
     ic: 'clipboard',
     category: 'GRC & Compliance',
+    image: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&q=80',
     title: 'ISO/IEC 27001 ISMS & 2022 Transitions',
     desc: 'Complete Information Security Management System (ISMS) implementation, gap assessments, policy development, internal audits, and seamless transition to ISO 27001:2022.',
     details: ['Gap Assessment', 'ISO 27001:2022 Transition', 'ISMS Policies & SOPs', 'Annex A Controls', 'Internal Audits', 'Certification Support'],
@@ -15,6 +16,7 @@ const services = [
   {
     ic: 'shield',
     category: 'GRC & Compliance',
+    image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80',
     title: 'SOC 2 Type I & Type II Readiness',
     desc: 'Prepare your cloud and SaaS architecture for SOC 2 attestation across Trust Services Criteria (Security, Availability, Confidentiality, Processing Integrity, Privacy).',
     details: ['Scoping & Gap Analysis', 'Control Design', 'Evidence Automation', 'Continuous Monitoring', 'Auditor Facilitation', 'Type II Readiness'],
@@ -22,6 +24,7 @@ const services = [
   {
     ic: 'alertTriangle',
     category: 'GRC & Compliance',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
     title: 'Cyber Risk Management & Quantification',
     desc: 'Quantify financial impact of cyber risks, build enterprise risk registers, conduct FAIR-aligned risk assessments, and deliver executive board reports.',
     details: ['Risk Registers', 'FAIR Methodology', 'Risk Treatment Plans', 'Board Risk Reporting', 'Threat Modeling', 'Maturity Benchmarking'],
@@ -29,6 +32,7 @@ const services = [
   {
     ic: 'building',
     category: 'GRC & Compliance',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
     title: 'Third-Party & Vendor Risk (TPRM)',
     desc: 'Establish vendor risk tiers, evaluate supplier security posture, automate security questionnaires (SIG/CAIQ), and manage supply chain cyber exposures.',
     details: ['Vendor Tiering', 'Security Questionnaires', 'Contractual Security Review', 'SaaS Risk Audits', 'Continuous Monitoring', 'Supply Chain Security'],
@@ -38,6 +42,7 @@ const services = [
   {
     ic: 'aiChip',
     category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
     title: 'ISO/IEC 42001 (AIMS) Implementation',
     desc: 'Lead the industry with the first international standard for Artificial Intelligence Management Systems (AIMS). Establish governance, risk controls, and ethical AI safeguards.',
     details: ['AIMS Policy & Scope', 'AI Risk Assessment', 'AI Impact Assessments', 'Control Implementation', 'AI Internal Audit', 'Certification Readiness'],
@@ -45,6 +50,7 @@ const services = [
   {
     ic: 'fileText',
     category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80',
     title: 'NIST AI Risk Management Framework',
     desc: 'Operationalize the NIST AI RMF across Govern, Map, Measure, and Manage functions to foster trustworthy, safe, and transparent enterprise AI systems.',
     details: ['NIST AI RMF Mapping', 'Trustworthiness Metrics', 'AI Model Transparency', 'Data Governance for AI', 'Explainability Audits', 'Continuous Oversight'],
@@ -52,6 +58,7 @@ const services = [
   {
     ic: 'zap',
     category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=800&q=80',
     title: 'Generative AI & LLM Security (OWASP Top 10)',
     desc: 'Identify and remediate prompt injection, data leakage, model poisoning, insecure output handling, and supply chain vulnerabilities in enterprise LLMs.',
     details: ['Prompt Injection Testing', 'Model Inversion Defense', 'PII Data Redaction', 'RAG Security Architecture', 'LLM Red Teaming', 'API Gateway Guardrails'],
@@ -59,6 +66,7 @@ const services = [
   {
     ic: 'lock',
     category: 'AI Governance',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
     title: 'Shadow AI & Corporate AI Policy',
     desc: 'Control unmanaged employee GenAI usage, design acceptable use policies, evaluate third-party AI SaaS tools, and implement DLP guardrails.',
     details: ['GenAI Acceptable Use', 'Shadow AI Discovery', 'Third-Party AI Tool Audits', 'Data Loss Prevention', 'Employee Training', 'Corporate AI Charter'],
@@ -68,6 +76,7 @@ const services = [
   {
     ic: 'target',
     category: 'Cybersecurity',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80',
     title: 'Penetration Testing & VAPT',
     desc: 'Rigorous manual and automated offensive security assessments across web applications, cloud environments, APIs, mobile apps, and enterprise networks.',
     details: ['Web App Pentesting', 'API Security Testing', 'Cloud VAPT', 'Network Pentesting', 'Mobile App Testing', 'Remediation Re-testing'],
@@ -75,6 +84,7 @@ const services = [
   {
     ic: 'cloud',
     category: 'Cybersecurity',
+    image: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80',
     title: 'Cloud Security Posture & Architecture',
     desc: 'Design and audit resilient cloud architectures across AWS, Azure, and GCP. Remediate misconfigurations, enforce IAM least-privilege, and automate CSPM.',
     details: ['AWS / Azure / GCP Audits', 'CSPM Implementation', 'Infrastructure as Code (IaC)', 'Kubernetes & Containers', 'Cloud Baseline Hardening', 'Zero Trust Cloud'],
@@ -82,6 +92,7 @@ const services = [
   {
     ic: 'key',
     category: 'Cybersecurity',
+    image: 'https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&w=800&q=80',
     title: 'Zero Trust & Identity Security (IAM)',
     desc: 'Eliminate implicit trust by architecting continuous verification, fine-grained access control, Single Sign-On (SSO), Multi-Factor Authentication (MFA), and PAM.',
     details: ['Zero Trust Framework', 'Identity Governance', 'Privileged Access (PAM)', 'SSO & MFA Strategy', 'Conditional Access', 'Directory Hardening'],
@@ -89,6 +100,7 @@ const services = [
   {
     ic: 'userTie',
     category: 'Cybersecurity',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80',
     title: 'Virtual CISO (vCISO) & Advisory',
     desc: 'Executive-level security leadership on demand. Drive cyber strategy, lead compliance programs, manage audit committees, and present to board of directors.',
     details: ['Security Strategy Roadmap', 'Audit Committee Prep', 'Board & Exec Reporting', 'Budget & Resource Planning', 'Incident Advisory', 'Security Culture'],
@@ -113,12 +125,16 @@ export function servicesPage() {
         <div class="grid grid-3 stagger-children">
           ${services.map(svc => `
             <div class="card service-card" style="display:flex;flex-direction:column;">
-              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-4);">
-                <div class="card-icon" style="margin-bottom:0;">${icon(svc.ic, 26, 'var(--cyber-blue)')}</div>
+              <div class="card-image-wrap" style="height:170px;margin-bottom:var(--space-4);">
+                <img src="${svc.image}" alt="${svc.title}" class="card-image" loading="lazy" />
+                <div class="card-image-overlay"></div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">
+                <div class="card-icon" style="margin-bottom:0;width:38px;height:38px;">${icon(svc.ic, 20, 'var(--cyber-blue)')}</div>
                 <span style="font-family:var(--font-mono);font-size:11px;padding:2px 8px;border-radius:12px;background:rgba(37,99,235,0.08);color:var(--cyber-blue);border:1px solid rgba(37,99,235,0.2);">${svc.category}</span>
               </div>
-              <h3 class="card-title">${svc.title}</h3>
-              <p class="card-description" style="margin-bottom:var(--space-6);flex:1;">${svc.desc}</p>
+              <h3 class="card-title" style="font-size:var(--text-lg);margin-bottom:var(--space-2);">${svc.title}</h3>
+              <p class="card-description" style="margin-bottom:var(--space-5);flex:1;font-size:var(--text-sm);">${svc.desc}</p>
               <div class="career-card" style="margin-top:auto;">
                 <div class="card-tags">
                   ${svc.details.map(d => `<span class="tag">${d}</span>`).join('')}
