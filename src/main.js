@@ -15,11 +15,13 @@ import { servicesPage } from './pages/services.js';
 import { caseStudiesPage } from './pages/case-studies.js';
 import { aboutPage } from './pages/about.js';
 import { careerPage } from './pages/career.js';
+import { blogPage } from './pages/blog.js';
 
 // --- Register Routes ---
 registerRoute('/', homePage);
 registerRoute('/services', servicesPage);
 registerRoute('/case-studies', caseStudiesPage);
+registerRoute('/blog', blogPage);
 registerRoute('/about', aboutPage);
 registerRoute('/career', careerPage);
 

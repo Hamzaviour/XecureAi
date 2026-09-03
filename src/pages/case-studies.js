@@ -1,6 +1,7 @@
 /* ============================================
    XECURE AI — CASE STUDIES PAGE
    ============================================ */
+import { icon } from '../js/icons.js';
 
 const caseStudies = [
   {
@@ -93,12 +94,12 @@ export function caseStudiesPage() {
           ${caseStudies.map(cs => `
             <div class="card case-study-card" id="case-${cs.id}" onclick="this.querySelector('.case-study-detail').classList.toggle('open')">
               <div class="card-badge">
-                <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+                ${icon('checkCircle', 14, 'var(--cyber-blue)')}
                 <span>${cs.badge}</span>
               </div>
               <div class="card-meta">
-                <span>📍 ${cs.location}</span>
-                <span>💻 ${cs.industry}</span>
+                <span>${icon('mapPin', 12)} ${cs.location}</span>
+                <span>${icon('briefcase', 12)} ${cs.industry}</span>
               </div>
               <h3 class="card-title">${cs.title}</h3>
               <p class="card-description">${cs.challenge}</p>
@@ -110,7 +111,7 @@ export function caseStudiesPage() {
               ` : ''}
 
               <div class="case-study-detail">
-                <h4>How XecureAI Helped</h4>
+                <h4>How Xecure AI Helped</h4>
                 <div class="case-study-steps">
                   ${cs.steps.map(step => `
                     <div class="case-study-step">
@@ -123,7 +124,7 @@ export function caseStudiesPage() {
               </div>
 
               <div class="card-result">
-                <span>🏆</span>
+                ${icon('trophy', 16, 'var(--success)')}
                 <span>${cs.result}</span>
               </div>
             </div>
@@ -141,9 +142,9 @@ export function caseStudiesPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Ready to Be Our <span class="text-gradient">Next Success Story?</span></h2>
             <p class="cta-subtitle text-body-lg">Let us help your organization achieve its security and compliance goals.</p>
-            <a href="mailto:info@xecureai.com" class="btn btn-glass btn-lg">
+            <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
               Start Your Journey
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+              ${icon('arrowRight', 18)}
             </a>
           </div>
         </div>

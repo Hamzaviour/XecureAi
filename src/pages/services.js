@@ -1,70 +1,71 @@
 /* ============================================
    XECURE AI — SERVICES PAGE
    ============================================ */
+import { icon } from '../js/icons.js';
 
 const services = [
   {
-    icon: '🔐',
+    ic: 'shield',
     title: 'Information Security',
     desc: 'Establish and improve your information security programs with assessments, architecture, policies, controls, governance, and strategy.',
     details: ['Security Assessment', 'Security Architecture', 'Security Policies', 'Security Controls', 'Governance', 'Maturity Assessment'],
   },
   {
-    icon: '🤖',
+    ic: 'aiChip',
     title: 'AI Security',
     desc: 'Secure your AI systems, LLMs, and generative AI with risk assessments, governance, prompt injection testing, and secure AI architecture.',
     details: ['AI Risk Assessment', 'LLM Security', 'Generative AI Security', 'Prompt Injection Testing', 'AI Red Teaming', 'AI Compliance'],
   },
   {
-    icon: '📋',
+    ic: 'clipboard',
     title: 'GRC & Compliance',
     desc: 'Navigate complex regulatory requirements with ISO 27001, SOC 2, PCI DSS, NIST, GDPR, and custom compliance consulting.',
     details: ['ISO 27001', 'SOC 2', 'PCI DSS', 'NIST', 'GDPR', 'Cyber Essentials'],
   },
   {
-    icon: '🎯',
+    ic: 'target',
     title: 'Penetration Testing',
     desc: 'Identify vulnerabilities before attackers do with comprehensive network, web application, API, mobile, and cloud penetration testing.',
     details: ['Network Pentesting', 'Web Application Testing', 'API Security Testing', 'Mobile App Testing', 'Cloud Pentesting', 'Red Teaming'],
   },
   {
-    icon: '☁️',
+    ic: 'cloud',
     title: 'Cloud Security',
     desc: 'Protect your cloud infrastructure across AWS, Azure, and GCP with security assessments, architecture reviews, and hardening.',
     details: ['AWS Security', 'Azure Security', 'GCP Security', 'Cloud Architecture Review', 'CSPM', 'Container Security'],
   },
   {
-    icon: '🛰️',
+    ic: 'radar',
     title: 'SOC / MDR / XDR',
     desc: '24/7 security monitoring, managed detection and response, and extended detection across your entire digital environment.',
     details: ['SOC as a Service', 'Managed Detection', 'Extended Detection', 'Threat Hunting', 'Incident Response', 'SIEM Management'],
   },
   {
-    icon: '🔑',
+    ic: 'key',
     title: 'Identity & Access Management',
     desc: 'Implement zero-trust architectures, SSO, MFA, privileged access management, and identity governance frameworks.',
     details: ['Zero Trust', 'SSO / MFA', 'Privileged Access', 'Identity Governance', 'Access Reviews', 'Directory Services'],
   },
   {
-    icon: '🔒',
+    ic: 'lock',
     title: 'Privacy & Data Protection',
     desc: 'Ensure data privacy compliance with GDPR, data classification, DLP, privacy impact assessments, and data governance.',
     details: ['GDPR Compliance', 'Data Classification', 'DLP Implementation', 'Privacy Assessments', 'Data Governance', 'Cross-Border Data'],
   },
   {
-    icon: '🔄',
+    ic: 'refresh',
     title: 'Business Continuity',
     desc: 'Build organizational resilience with disaster recovery planning, business impact analysis, and continuity testing.',
     details: ['DR Planning', 'Business Impact Analysis', 'Continuity Testing', 'Crisis Management', 'Recovery Strategies', 'Resilience Programs'],
   },
   {
-    icon: '📖',
+    ic: 'bookOpen',
     title: 'Security Awareness',
     desc: 'Educate your workforce with phishing simulations, security training programs, and culture transformation initiatives.',
     details: ['Phishing Simulation', 'Training Programs', 'Culture Assessment', 'Awareness Campaigns', 'Executive Training', 'Compliance Training'],
   },
   {
-    icon: '👨‍💼',
+    ic: 'userTie',
     title: 'vCISO',
     desc: 'Access seasoned security leadership on-demand with virtual CISO services, security strategy, and board-level reporting.',
     details: ['Security Strategy', 'Board Reporting', 'Security Roadmap', 'Risk Oversight', 'Vendor Management', 'Team Building'],
@@ -89,7 +90,7 @@ export function servicesPage() {
         <div class="grid grid-3 stagger-children">
           ${services.map(svc => `
             <div class="card service-card">
-              <div class="card-icon"><span>${svc.icon}</span></div>
+              <div class="card-icon">${icon(svc.ic, 28, 'var(--cyber-blue)')}</div>
               <h3 class="card-title">${svc.title}</h3>
               <p class="card-description">${svc.desc}</p>
               <div class="career-card">
@@ -116,17 +117,17 @@ export function servicesPage() {
         </div>
         <div class="grid grid-4 stagger-children">
           ${[
-            { icon: '🏛️', name: 'Government' },
-            { icon: '🏦', name: 'Banking & Finance' },
-            { icon: '🏥', name: 'Healthcare' },
-            { icon: '💻', name: 'Technology' },
-            { icon: '⚡', name: 'Energy & Utilities' },
-            { icon: '🎓', name: 'Education' },
-            { icon: '🚀', name: 'Startups & SaaS' },
-            { icon: '📱', name: 'Telecom' },
+            { ic: 'building', name: 'Government' },
+            { ic: 'bank', name: 'Banking & Finance' },
+            { ic: 'hospital', name: 'Healthcare' },
+            { ic: 'monitor', name: 'Technology' },
+            { ic: 'zap', name: 'Energy & Utilities' },
+            { ic: 'graduationCap', name: 'Education' },
+            { ic: 'rocket', name: 'Startups & SaaS' },
+            { ic: 'phone', name: 'Telecom' },
           ].map(ind => `
             <div class="card" style="text-align:center;padding:var(--space-8) var(--space-4);">
-              <div style="font-size:2rem;margin-bottom:var(--space-3);">${ind.icon}</div>
+              <div style="margin-bottom:var(--space-3);display:flex;justify-content:center;">${icon(ind.ic, 32, 'var(--cyber-blue)')}</div>
               <div style="font-weight:var(--font-semibold);font-size:var(--text-sm);">${ind.name}</div>
             </div>
           `).join('')}
@@ -143,9 +144,9 @@ export function servicesPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Need a Security <span class="text-gradient">Assessment?</span></h2>
             <p class="cta-subtitle text-body-lg">Our experts will evaluate your security posture and provide actionable recommendations.</p>
-            <a href="mailto:info@xecureai.com" class="btn btn-glass btn-lg">
+            <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
               Schedule a Consultation
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+              ${icon('arrowRight', 18)}
             </a>
           </div>
         </div>

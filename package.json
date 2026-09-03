@@ -6,7 +6,7 @@
   "description": "Xecure AI — Intelligent Cybersecurity & AI Security",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npx --yes vite build",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -1,6 +1,7 @@
 /* ============================================
    XECURE AI — CAREER PAGE
    ============================================ */
+import { icon } from '../js/icons.js';
 
 const positions = [
   {
@@ -73,15 +74,15 @@ export function careerPage() {
         </div>
         <div class="benefits-grid stagger-children">
           ${[
-            { icon: '🌍', title: 'Global Impact', desc: 'Protect organizations across 3 continents.' },
-            { icon: '🚀', title: 'Cutting-Edge Tech', desc: 'Work with AI, ML, and advanced security tools.' },
-            { icon: '📚', title: 'Continuous Learning', desc: 'Certifications, training, and conference support.' },
-            { icon: '🏠', title: 'Remote Flexibility', desc: 'Work from anywhere with flexible schedules.' },
-            { icon: '📈', title: 'Career Growth', desc: 'Clear advancement paths and mentorship.' },
-            { icon: '🤝', title: 'Collaborative Culture', desc: 'A team that values integrity and innovation.' },
+            { ic: 'globe', title: 'Global Impact', desc: 'Protect organizations across 3 continents.' },
+            { ic: 'cpu', title: 'Cutting-Edge Tech', desc: 'Work with AI, ML, and advanced security tools.' },
+            { ic: 'bookOpen', title: 'Continuous Learning', desc: 'Certifications, training, and conference support.' },
+            { ic: 'home', title: 'Remote Flexibility', desc: 'Work from anywhere with flexible schedules.' },
+            { ic: 'trendingUp', title: 'Career Growth', desc: 'Clear advancement paths and mentorship.' },
+            { ic: 'users', title: 'Collaborative Culture', desc: 'A team that values integrity and innovation.' },
           ].map(b => `
             <div class="card benefit-item">
-              <div class="benefit-icon">${b.icon}</div>
+              <div class="benefit-icon">${icon(b.ic, 28, 'var(--cyber-blue)')}</div>
               <div>
                 <h4 class="benefit-title">${b.title}</h4>
                 <p class="benefit-desc">${b.desc}</p>
@@ -109,17 +110,17 @@ export function careerPage() {
               <div style="flex:1;min-width:250px;">
                 <h3 class="card-title" style="margin-bottom:var(--space-2);">${pos.title}</h3>
                 <div style="display:flex;gap:var(--space-4);font-size:var(--text-xs);color:var(--text-tertiary);margin-bottom:var(--space-3);">
-                  <span>🏢 ${pos.department}</span>
-                  <span>📍 ${pos.location}</span>
-                  <span>⏰ ${pos.type}</span>
+                  <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('briefcase', 12)} ${pos.department}</span>
+                  <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('mapPin', 12)} ${pos.location}</span>
+                  <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('clock', 12)} ${pos.type}</span>
                 </div>
                 <div class="card-tags">
                   ${pos.tags.map(t => `<span class="tag">${t}</span>`).join('')}
                 </div>
               </div>
-              <a href="mailto:careers@xecureai.com?subject=Application: ${encodeURIComponent(pos.title)}" class="btn btn-glass btn-sm">
+              <a href="mailto:support@xecureai.com?subject=Application: ${encodeURIComponent(pos.title)}" class="btn btn-glass btn-sm">
                 Apply Now
-                <svg class="btn-icon" width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                ${icon('arrowRight', 14)}
               </a>
             </div>
           `).join('')}
@@ -136,9 +137,9 @@ export function careerPage() {
           <div style="position:relative;z-index:1;">
             <h2 class="cta-title text-h2">Don't See Your <span class="text-gradient-purple">Role?</span></h2>
             <p class="cta-subtitle text-body-lg">We're always looking for talented security professionals. Send us your resume.</p>
-            <a href="mailto:careers@xecureai.com" class="btn btn-glass btn-lg">
+            <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
               Send Your Resume
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+              ${icon('arrowRight', 18)}
             </a>
           </div>
         </div>

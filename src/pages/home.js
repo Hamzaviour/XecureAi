@@ -2,6 +2,7 @@
    XECURE AI — HOME PAGE
    ============================================ */
 import { initHeroScene } from '../js/hero-scene.js';
+import { icon } from '../js/icons.js';
 
 export function homePage() {
   const html = `
@@ -30,7 +31,7 @@ export function homePage() {
           <div class="hero-actions">
             <a href="#/services" data-route="/services" class="btn btn-glass btn-lg">
               <span>Secure Your Organization</span>
-              <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+              ${icon('arrowRight', 18)}
             </a>
             <a href="#/services" data-route="/services" class="btn btn-outline btn-lg">
               Explore Services
@@ -47,7 +48,7 @@ export function homePage() {
            'Government Agencies', 'Financial Institutions', 'Healthcare Providers', 'Technology Companies', 'SaaS Enterprises', 'Energy & Utilities', 'Education Sector', 'Insurance Companies']
           .map(name => `
             <div class="marquee-item floating" style="animation-delay: ${Math.random() * 2}s">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+              ${icon('shieldCheck', 20)}
               <span>${name}</span>
             </div>
           `).join('')}
@@ -67,15 +68,16 @@ export function homePage() {
         </div>
         <div class="process-grid stagger-children">
           ${[
-            { title: 'Discover', desc: 'Understand assets, systems, data and risks across your environment.' },
-            { title: 'Assess', desc: 'Identify vulnerabilities, weaknesses, and compliance gaps.' },
-            { title: 'Protect', desc: 'Implement security controls, policies, and defense mechanisms.' },
-            { title: 'Detect', desc: 'Monitor threats, anomalies, and suspicious activity in real-time.' },
-            { title: 'Respond', desc: 'Investigate and respond to security incidents rapidly.' },
-            { title: 'Recover', desc: 'Restore operations and strengthen organizational resilience.' },
-            { title: 'Optimize', desc: 'Continuously improve security using intelligence and AI.' },
+            { title: 'Discover', desc: 'Understand assets, systems, data and risks across your environment.', ic: 'search' },
+            { title: 'Assess', desc: 'Identify vulnerabilities, weaknesses, and compliance gaps.', ic: 'eye' },
+            { title: 'Protect', desc: 'Implement security controls, policies, and defense mechanisms.', ic: 'shield' },
+            { title: 'Detect', desc: 'Monitor threats, anomalies, and suspicious activity in real-time.', ic: 'radar' },
+            { title: 'Respond', desc: 'Investigate and respond to security incidents rapidly.', ic: 'zap' },
+            { title: 'Recover', desc: 'Restore operations and strengthen organizational resilience.', ic: 'refresh' },
+            { title: 'Optimize', desc: 'Continuously improve security using intelligence and AI.', ic: 'trendingUp' },
           ].map(step => `
             <div class="process-step card">
+              <div style="margin-bottom:var(--space-3);color:var(--cyber-blue);">${icon(step.ic, 28, 'var(--cyber-blue)')}</div>
               <h3 class="process-step-title">${step.title}</h3>
               <p class="process-step-desc">${step.desc}</p>
             </div>
@@ -97,14 +99,14 @@ export function homePage() {
         </div>
         <div class="grid grid-4 stagger-children">
           ${[
-            { icon: '🛡️', title: 'Cybersecurity', desc: 'Traditional and modern cybersecurity — from security assessments and architecture to governance and compliance.', color: 'var(--cyber-blue)' },
-            { icon: '🤖', title: 'AI Security', desc: 'Securing AI systems, LLMs, generative AI, and implementing AI-powered threat detection and defense.', color: 'var(--ai-purple)' },
-            { icon: '⚠️', title: 'Cyber Risk', desc: 'Enterprise risk assessment, vendor risk management, risk quantification, and executive risk reporting.', color: 'var(--electric-blue)' },
-            { icon: '🔒', title: 'Cyber Defense', desc: 'SOC operations, MDR/XDR, threat detection, incident response, and 24/7 security monitoring.', color: 'var(--cyan)' },
+            { ic: 'shield', title: 'Cybersecurity', desc: 'Traditional and modern cybersecurity — from security assessments and architecture to governance and compliance.', color: 'var(--cyber-blue)' },
+            { ic: 'aiChip', title: 'AI Security', desc: 'Securing AI systems, LLMs, generative AI, and implementing AI-powered threat detection and defense.', color: 'var(--ai-purple)' },
+            { ic: 'alertTriangle', title: 'Cyber Risk', desc: 'Enterprise risk assessment, vendor risk management, risk quantification, and executive risk reporting.', color: 'var(--electric-blue)' },
+            { ic: 'lock', title: 'Cyber Defense', desc: 'SOC operations, MDR/XDR, threat detection, incident response, and 24/7 security monitoring.', color: 'var(--cyan)' },
           ].map(svc => `
             <div class="card service-card">
               <div class="card-icon" style="border-color: ${svc.color}30; background: ${svc.color}15;">
-                <span>${svc.icon}</span>
+                ${icon(svc.ic, 28, svc.color)}
               </div>
               <h3 class="card-title">${svc.title}</h3>
               <p class="card-description">${svc.desc}</p>
@@ -195,33 +197,33 @@ export function homePage() {
         <div class="grid grid-2 stagger-children">
           <div class="card case-study-card">
             <div class="card-badge">
-              <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              ${icon('checkCircle', 14, 'var(--cyber-blue)')}
               <span>ISO/IEC 27001</span>
             </div>
             <div class="card-meta">
-              <span>📍 United States</span>
-              <span>💻 Technology & Cloud Services</span>
+              <span>${icon('mapPin', 12)} United States</span>
+              <span>${icon('monitor', 12)} Technology & Cloud</span>
             </div>
             <h3 class="card-title">ISO/IEC 27001 Certification Achieved</h3>
             <p class="card-description">Supported a technology company through the complete ISO/IEC 27001 implementation journey — from gap assessment and risk management to ISMS development and certification audit readiness.</p>
             <div class="card-result">
-              <span>🏆</span>
+              ${icon('trophy', 16, 'var(--success)')}
               <span>ISO/IEC 27001 Certification Achieved</span>
             </div>
           </div>
           <div class="card case-study-card">
             <div class="card-badge">
-              <svg width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              ${icon('checkCircle', 14, 'var(--cyber-blue)')}
               <span>Multi-Framework</span>
             </div>
             <div class="card-meta">
-              <span>📍 United Kingdom</span>
-              <span>💻 Technology</span>
+              <span>${icon('mapPin', 12)} United Kingdom</span>
+              <span>${icon('monitor', 12)} Technology</span>
             </div>
             <h3 class="card-title">Multi-Framework Compliance Success</h3>
             <p class="card-description">Strengthened a technology company's security governance and demonstrated compliance across ISO 27001, SOC 2 Type II, PCI DSS, and Cyber Essentials Plus.</p>
             <div class="card-result">
-              <span>🏆</span>
+              ${icon('trophy', 16, 'var(--success)')}
               <span>6 Certifications Achieved</span>
             </div>
           </div>
@@ -229,7 +231,7 @@ export function homePage() {
         <div class="text-center mt-8 reveal">
           <a href="#/case-studies" data-route="/case-studies" class="btn btn-outline">
             View All Case Studies
-            <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+            ${icon('arrowRight', 16)}
           </a>
         </div>
       </div>
@@ -246,9 +248,9 @@ export function homePage() {
             <h2 class="cta-title text-h2">Ready to <span class="text-gradient">Secure</span> Your Organization?</h2>
             <p class="cta-subtitle text-body-lg">Get in touch with our security experts and discover how Xecure AI can protect your digital infrastructure.</p>
             <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
-              <a href="mailto:info@xecureai.com" class="btn btn-glass btn-lg">
+              <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
                 Get Protected
-                <svg class="btn-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
+                ${icon('arrowRight', 18)}
               </a>
               <a href="#/about" data-route="/about" class="btn btn-outline btn-lg">Learn About Us</a>
             </div>
