@@ -86,7 +86,7 @@ export function blogPage() {
         <div class="card reveal" style="margin-bottom:var(--space-12);padding:0;overflow:hidden;">
           <div class="blog-featured-grid">
             <div class="featured-image-wrap">
-              <img src="${blogPosts[0].image}" alt="${blogPosts[0].title}" class="featured-image" loading="lazy" />
+              <img src="${blogPosts[0].image}" alt="${blogPosts[0].title}" class="featured-image" loading="lazy" decoding="async" width="1200" height="600" />
               <div class="card-image-overlay"></div>
               <div style="position:absolute;top:var(--space-4);left:var(--space-4);z-index:2;">
                 <span style="padding:var(--space-1) var(--space-3);border-radius:var(--radius-full);background:rgba(7,17,31,0.75);backdrop-filter:blur(10px);border:1px solid rgba(37,99,235,0.3);font-family:var(--font-mono);font-size:var(--text-xs);color:var(--electric-blue);letter-spacing:var(--tracking-wider);text-transform:uppercase;">Featured Article</span>
@@ -112,7 +112,7 @@ export function blogPage() {
           ${blogPosts.slice(1).map(post => `
             <article class="card" style="display:flex;flex-direction:column;">
               <div class="card-image-wrap">
-                <img src="${post.image}" alt="${post.title}" class="card-image" loading="lazy" />
+                <img src="${post.image}" alt="${post.title}" class="card-image" loading="lazy" decoding="async" width="800" height="450" />
                 <div class="card-image-overlay"></div>
               </div>
               <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-3);flex-wrap:wrap;">

@@ -226,7 +226,7 @@ export function homePage() {
         <div class="grid grid-2 stagger-children">
           <div class="card case-study-card" onclick="window.location.hash='#/case-studies'">
             <div class="card-image-wrap">
-              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80" alt="ISO 27001 Cloud Certification" class="card-image" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="ISO 27001 Cloud Certification" class="card-image" loading="lazy" decoding="async" width="800" height="450" />
               <div class="card-image-overlay"></div>
             </div>
             <div class="card-badge">
@@ -246,7 +246,7 @@ export function homePage() {
           </div>
           <div class="card case-study-card" onclick="window.location.hash='#/case-studies'">
             <div class="card-image-wrap">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80" alt="Multi-Framework Compliance" class="card-image" loading="lazy" />
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Multi-Framework Compliance" class="card-image" loading="lazy" decoding="async" width="800" height="450" />
               <div class="card-image-overlay"></div>
             </div>
             <div class="card-badge">

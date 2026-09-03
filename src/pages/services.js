@@ -126,7 +126,7 @@ export function servicesPage() {
           ${services.map(svc => `
             <div class="card service-card" style="display:flex;flex-direction:column;">
               <div class="card-image-wrap" style="height:170px;margin-bottom:var(--space-4);">
-                <img src="${svc.image}" alt="${svc.title}" class="card-image" loading="lazy" />
+                <img src="${svc.image}" alt="${svc.title}" class="card-image" loading="lazy" decoding="async" width="800" height="450" />
                 <div class="card-image-overlay"></div>
               </div>
               <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--space-3);">

@@ -147,6 +147,7 @@ export function initHeroScene(container) {
   scene.add(lines);
 
   // --- Mouse tracking ---
+  // --- Mouse & Touch tracking ---
   const mouse = { x: 0, y: 0 };
   const targetRotation = { x: 0, y: 0 };
 
@@ -155,16 +156,44 @@ export function initHeroScene(container) {
     mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
   };
 
-  window.addEventListener('mousemove', onMouseMove, { passive: true });
+  const onTouchMove = (e) => {
+    if (e.touches && e.touches[0]) {
+      mouse.x = (e.touches[0].clientX / window.innerWidth) * 2 - 1;
+      mouse.y = -(e.touches[0].clientY / window.innerHeight) * 2 + 1;
+    }
+  };
 
-  // --- Animation Loop ---
+  window.addEventListener('mousemove', onMouseMove, { passive: true });
+  window.addEventListener('touchmove', onTouchMove, { passive: true });
+
+  // --- Animation Loop with Viewport Visibility Pausing ---
   const clock = new THREE.Clock();
-  let animationId;
+  let animationId = null;
+  let isRunning = false;
+  let isVisible = true;
+
+  function startAnimation() {
+    if (!isRunning && isVisible && document.visibilityState !== 'hidden') {
+      isRunning = true;
+      clock.start();
+      animate();
+    }
+  }
+
+  function stopAnimation() {
+    if (isRunning) {
+      isRunning = false;
+      if (animationId) {
+        cancelAnimationFrame(animationId);
+        animationId = null;
+      }
+    }
+  }
 
   function animate() {
+    if (!isRunning) return;
     animationId = requestAnimationFrame(animate);
     const time = clock.getElapsedTime();
-    const delta = clock.getDelta();
 
     // Update particles
     const pos = particlesGeo.attributes.position.array;
@@ -206,8 +235,8 @@ export function initHeroScene(container) {
     lineGeo.attributes.position.needsUpdate = true;
 
     // Shield rotation
-    targetRotation.x = mouse.y * 0.3;
-    targetRotation.y = mouse.x * 0.3;
+    targetRotation.x = mouse.y * 0.25;
+    targetRotation.y = mouse.x * 0.25;
     shieldGroup.rotation.x += (targetRotation.x - shieldGroup.rotation.x) * 0.05;
     shieldGroup.rotation.y += (targetRotation.y - shieldGroup.rotation.y) * 0.05;
     shieldGroup.rotation.z = Math.sin(time * 0.3) * 0.05;
@@ -220,7 +249,31 @@ export function initHeroScene(container) {
     renderer.render(scene, camera);
   }
 
-  animate();
+  // Viewport Intersection Observer for 0 CPU usage when scrolled down
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      isVisible = entry.isIntersecting;
+      if (isVisible) {
+        startAnimation();
+      } else {
+        stopAnimation();
+      }
+    });
+  }, { threshold: 0.05 });
+
+  observer.observe(container);
+
+  const onVisibilityChange = () => {
+    if (document.visibilityState === 'hidden') {
+      stopAnimation();
+    } else if (isVisible) {
+      startAnimation();
+    }
+  };
+
+  document.addEventListener('visibilitychange', onVisibilityChange);
+
+  startAnimation();
 
   // --- Resize ---
   const onResize = () => {
@@ -228,18 +281,24 @@ export function initHeroScene(container) {
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
     updateLayout();
   };
 
-  window.addEventListener('resize', onResize);
+  window.addEventListener('resize', onResize, { passive: true });
 
   // --- Cleanup ---
   return () => {
-    cancelAnimationFrame(animationId);
+    stopAnimation();
+    observer.disconnect();
+    document.removeEventListener('visibilitychange', onVisibilityChange);
     window.removeEventListener('mousemove', onMouseMove);
+    window.removeEventListener('touchmove', onTouchMove);
     window.removeEventListener('resize', onResize);
     renderer.dispose();
     scene.clear();
-    container.removeChild(renderer.domElement);
+    if (container.contains(renderer.domElement)) {
+      container.removeChild(renderer.domElement);
+    }
   };
 }

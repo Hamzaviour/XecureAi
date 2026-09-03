@@ -101,7 +101,7 @@ export function caseStudiesPage() {
           ${caseStudies.map(cs => `
             <div class="card case-study-card" id="case-${cs.id}" onclick="this.querySelector('.case-study-detail').classList.toggle('open')">
               <div class="card-image-wrap">
-                <img src="${cs.image}" alt="${cs.title}" class="card-image" loading="lazy" />
+                <img src="${cs.image}" alt="${cs.title}" class="card-image" loading="lazy" decoding="async" width="1200" height="600" />
                 <div class="card-image-overlay"></div>
               </div>
               <div class="card-badge">
