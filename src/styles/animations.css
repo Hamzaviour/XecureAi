@@ -33,9 +33,19 @@
   background-size: 256px 256px;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.35;
+  opacity: 0.3;
   animation: grain 8s steps(10) infinite;
   mix-blend-mode: overlay;
+}
+
+@media (max-width: 768px) {
+  .grain-overlay::after {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: none;
+    opacity: 0.15;
+  }
 }
 
 /* --- Fade In Up --- */
@@ -308,6 +318,23 @@
 .glow-shape--cyan {
   background: radial-gradient(circle, var(--glow-cyan), transparent 70%);
   animation-delay: -5s;
+}
+
+@media (max-width: 768px) {
+  .glow-shape {
+    max-width: 75vw;
+    max-height: 75vw;
+    filter: blur(50px);
+    opacity: 0.3 !important;
+  }
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(30px);
+  }
+  .reveal-left.revealed,
+  .reveal-right.revealed {
+    transform: translateY(0);
+  }
 }
 
 /* --- Reduce motion --- */

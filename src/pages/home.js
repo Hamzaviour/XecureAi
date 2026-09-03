@@ -121,13 +121,13 @@ export function homePage() {
       <div class="glow-shape glow-shape--purple" style="width:500px;height:500px;top:20%;right:-10%;"></div>
       <div class="glow-shape glow-shape--cyan" style="width:300px;height:300px;bottom:10%;left:5%;"></div>
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-16);align-items:center;">
+        <div class="ai-grid">
           <div class="reveal-left">
             <div class="section-label">
               <span class="label-dot"></span>
               <span>AI Security</span>
             </div>
-            <h2 class="section-title" style="text-align:left;">Secure Your AI.<br/><span class="text-gradient-purple">Before It's Too Late.</span></h2>
+            <h2 class="section-title">Secure Your AI.<br/><span class="text-gradient-purple">Before It's Too Late.</span></h2>
             <p style="color:var(--text-secondary);line-height:var(--leading-relaxed);margin-bottom:var(--space-8);">
               As organizations adopt AI and large language models, new attack surfaces emerge. Xecure AI provides specialized AI security assessments, AI governance, LLM security, prompt injection testing, and secure AI architecture — helping you innovate safely.
             </p>
@@ -195,7 +195,11 @@ export function homePage() {
           <p class="section-subtitle">See how we've helped organizations strengthen their security posture and achieve compliance.</p>
         </div>
         <div class="grid grid-2 stagger-children">
-          <div class="card case-study-card">
+          <div class="card case-study-card" onclick="window.location.hash='#/case-studies'">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80" alt="ISO 27001 Cloud Certification" class="card-image" loading="lazy" />
+              <div class="card-image-overlay"></div>
+            </div>
             <div class="card-badge">
               ${icon('checkCircle', 14, 'var(--cyber-blue)')}
               <span>ISO/IEC 27001</span>
@@ -211,7 +215,11 @@ export function homePage() {
               <span>ISO/IEC 27001 Certification Achieved</span>
             </div>
           </div>
-          <div class="card case-study-card">
+          <div class="card case-study-card" onclick="window.location.hash='#/case-studies'">
+            <div class="card-image-wrap">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80" alt="Multi-Framework Compliance" class="card-image" loading="lazy" />
+              <div class="card-image-overlay"></div>
+            </div>
             <div class="card-badge">
               ${icon('checkCircle', 14, 'var(--cyber-blue)')}
               <span>Multi-Framework</span>

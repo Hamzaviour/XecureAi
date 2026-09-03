@@ -106,10 +106,10 @@ export function careerPage() {
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-4);" class="stagger-children">
           ${positions.map(pos => `
-            <div class="card career-card" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4);">
-              <div style="flex:1;min-width:250px;">
+            <div class="card career-card">
+              <div class="career-card-info">
                 <h3 class="card-title" style="margin-bottom:var(--space-2);">${pos.title}</h3>
-                <div style="display:flex;gap:var(--space-4);font-size:var(--text-xs);color:var(--text-tertiary);margin-bottom:var(--space-3);">
+                <div style="display:flex;gap:var(--space-4);font-size:var(--text-xs);color:var(--text-tertiary);margin-bottom:var(--space-3);flex-wrap:wrap;">
                   <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('briefcase', 12)} ${pos.department}</span>
                   <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('mapPin', 12)} ${pos.location}</span>
                   <span style="display:flex;align-items:center;gap:var(--space-1);">${icon('clock', 12)} ${pos.type}</span>

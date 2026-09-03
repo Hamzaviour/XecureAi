@@ -9,6 +9,7 @@ const caseStudies = [
     badge: 'ISO/IEC 27001',
     location: 'United States',
     industry: 'Technology & Cloud Services',
+    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
     title: 'Supporting a Technology Company in Achieving ISO/IEC 27001 Certification',
     challenge: 'The organization wanted to achieve ISO/IEC 27001 certification and establish a structured Information Security Management System (ISMS). The challenge was not simply preparing documentation — it was ensuring that security requirements were understood, implemented, evidenced, and embedded into business operations.',
     steps: [
@@ -26,6 +27,7 @@ const caseStudies = [
     badge: 'Multi-Framework',
     location: 'United Kingdom',
     industry: 'Technology',
+    image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
     title: 'Supporting a Technology Company to Strengthen Its Security & Compliance Program',
     challenge: 'The organization needed to strengthen its security governance and demonstrate compliance against multiple internationally recognized security frameworks.',
     steps: [
@@ -44,6 +46,7 @@ const caseStudies = [
     badge: 'ISO 27001:2022 Transition',
     location: 'United Kingdom',
     industry: 'Technology',
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
     title: 'Successfully Transitioning from ISO/IEC 27001:2013 to ISO/IEC 27001:2022',
     challenge: 'As ISO/IEC 27001 evolved from the 2013 to the 2022 edition, the organization needed to reassess their ISMS, understand the updated requirements, address new controls, and prepare for transition audits.',
     steps: [
@@ -61,6 +64,7 @@ const caseStudies = [
     badge: 'Multi-Organization',
     location: 'Qatar',
     industry: 'Multiple Industries',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
     title: 'Supporting Multiple Organizations in Qatar Through ISO/IEC 27001:2022 Transition',
     challenge: 'Multiple organizations in Qatar needed to transition their ISMS from ISO/IEC 27001:2013 to the 2022 edition, each with unique environments, teams, and readiness levels.',
     steps: [
@@ -93,6 +97,10 @@ export function caseStudiesPage() {
         <div style="display:flex;flex-direction:column;gap:var(--space-8);" class="stagger-children">
           ${caseStudies.map(cs => `
             <div class="card case-study-card" id="case-${cs.id}" onclick="this.querySelector('.case-study-detail').classList.toggle('open')">
+              <div class="card-image-wrap">
+                <img src="${cs.image}" alt="${cs.title}" class="card-image" loading="lazy" />
+                <div class="card-image-overlay"></div>
+              </div>
               <div class="card-badge">
                 ${icon('checkCircle', 14, 'var(--cyber-blue)')}
                 <span>${cs.badge}</span>

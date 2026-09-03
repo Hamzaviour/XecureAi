@@ -79,13 +79,23 @@ export function initHeroScene(container) {
   }));
   shieldGroup.add(hexLine);
 
-  // Position shield to the right on desktop
-  if (!isMobile) {
-    shieldGroup.position.set(2, 0, 0);
-  } else {
-    shieldGroup.position.set(0, -1.5, 0);
-    shieldGroup.scale.set(0.8, 0.8, 0.8);
-  }
+  // Position shield dynamically based on screen size
+  const updateLayout = () => {
+    const mobile = window.innerWidth < 768;
+    const smallMobile = window.innerWidth < 480;
+    if (!mobile) {
+      shieldGroup.position.set(2, 0, 0);
+      shieldGroup.scale.set(1, 1, 1);
+    } else if (smallMobile) {
+      shieldGroup.position.set(0, -1.1, 0);
+      shieldGroup.scale.set(0.65, 0.65, 0.65);
+    } else {
+      shieldGroup.position.set(0, -1.3, 0);
+      shieldGroup.scale.set(0.78, 0.78, 0.78);
+    }
+  };
+
+  updateLayout();
   scene.add(shieldGroup);
 
   // --- Particle Network ---
@@ -214,9 +224,11 @@ export function initHeroScene(container) {
 
   // --- Resize ---
   const onResize = () => {
+    if (!container || !container.clientHeight) return;
     camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(container.clientWidth, container.clientHeight);
+    updateLayout();
   };
 
   window.addEventListener('resize', onResize);

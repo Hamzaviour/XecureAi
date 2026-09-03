@@ -19,7 +19,7 @@ export function aboutPage() {
     <!-- Mission & Vision -->
     <section class="section">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);" class="stagger-children">
+        <div class="grid grid-2 stagger-children">
           <div class="card" style="border-color:rgba(37,99,235,0.2);">
             <div style="margin-bottom:var(--space-4);color:var(--cyber-blue);">${icon('target', 32, 'var(--cyber-blue)')}</div>
             <div style="font-family:var(--font-mono);font-size:var(--text-xs);color:var(--cyber-blue);font-weight:var(--font-semibold);text-transform:uppercase;letter-spacing:var(--tracking-widest);margin-bottom:var(--space-4);">Our Mission</div>

@@ -16,11 +16,18 @@ export function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px',
   });
 
-  revealElements.forEach(el => observer.observe(el));
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('revealed');
+    } else {
+      observer.observe(el);
+    }
+  });
 
   // Text reveal word-by-word
   const textRevealElements = document.querySelectorAll('.text-reveal');
@@ -32,7 +39,7 @@ export function initScrollReveal() {
     const text = el.textContent.trim();
     const words = text.split(/\s+/);
     el.innerHTML = words.map((word, i) =>
-      `<span class="word" style="transition-delay: ${i * 0.06}s">${word}</span>`
+      `<span class="word" style="transition-delay: ${i * 0.05}s">${word}</span>`
     ).join(' ');
   });
 
@@ -44,11 +51,18 @@ export function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.2,
-    rootMargin: '0px 0px -30px 0px',
+    threshold: 0.05,
+    rootMargin: '0px 0px -20px 0px',
   });
 
-  textRevealElements.forEach(el => textObserver.observe(el));
+  textRevealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('revealed');
+    } else {
+      textObserver.observe(el);
+    }
+  });
 }
 
 // Make globally available for router re-init

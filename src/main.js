@@ -9,6 +9,7 @@ import { registerRoute, initRouter } from './js/router.js';
 import { initScrollReveal } from './js/scroll-reveal.js';
 import { initThemeToggle } from './js/theme-toggle.js';
 import { initMenu } from './js/menu.js';
+import { initStickyCTA } from './js/sticky-cta.js';
 
 import { homePage } from './pages/home.js';
 import { servicesPage } from './pages/services.js';
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Init global modules
   initThemeToggle();
   initMenu();
+  initStickyCTA();
 
   // Init router
   initRouter(app);

@@ -31,21 +31,39 @@ export function initRouter(appContainer) {
       currentCleanup = null;
     }
 
-    // Transition out
-    appContainer.style.opacity = '0';
-    appContainer.style.transform = 'translateY(10px)';
+    try {
+      // Transition out
+      appContainer.style.opacity = '0';
+      appContainer.style.transform = 'translateY(8px)';
 
-    await new Promise(r => setTimeout(r, 200));
+      await new Promise(r => setTimeout(r, 150));
 
-    // Render new page
-    const result = handler();
-    if (typeof result === 'object' && result.html) {
-      appContainer.innerHTML = result.html;
-      if (typeof result.init === 'function') {
-        currentCleanup = result.init();
+      // Render new page
+      const result = handler();
+      if (typeof result === 'object' && result && result.html) {
+        appContainer.innerHTML = result.html;
+        if (typeof result.init === 'function') {
+          try {
+            currentCleanup = result.init();
+          } catch (initErr) {
+            console.warn('[Router] Page init warning:', initErr);
+          }
+        }
+      } else if (typeof result === 'string') {
+        appContainer.innerHTML = result;
       }
-    } else if (typeof result === 'string') {
-      appContainer.innerHTML = result;
+    } catch (err) {
+      console.error('[Router] Rendering error:', err);
+      // Graceful fallback to prevent blank screen
+      appContainer.innerHTML = `
+        <section class="section text-center" style="min-height:70vh;display:flex;align-items:center;justify-content:center;">
+          <div class="container">
+            <h2 class="text-h2 mb-4">Page Not Found</h2>
+            <p class="text-secondary mb-8">The requested page could not be loaded.</p>
+            <a href="#/" data-route="/" class="btn btn-primary btn-lg">Return to Home</a>
+          </div>
+        </section>
+      `;
     }
 
     // Scroll to top
@@ -64,9 +82,11 @@ export function initRouter(appContainer) {
     });
 
     // Re-init scroll reveals
-    if (window.__initScrollReveal) {
-      window.__initScrollReveal();
-    }
+    setTimeout(() => {
+      if (window.__initScrollReveal) {
+        window.__initScrollReveal();
+      }
+    }, 50);
   }
 
   // Page transitions
