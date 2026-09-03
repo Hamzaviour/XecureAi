@@ -6,76 +6,79 @@ import { icon } from '../js/icons.js';
 const caseStudies = [
   {
     id: 1,
-    badge: 'ISO/IEC 27001',
+    badge: 'ISO/IEC 27001 ISMS',
     location: 'United States',
     industry: 'Technology & Cloud Services',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80',
-    title: 'Supporting a Technology Company in Achieving ISO/IEC 27001 Certification',
-    challenge: 'The organization wanted to achieve ISO/IEC 27001 certification and establish a structured Information Security Management System (ISMS). The challenge was not simply preparing documentation — it was ensuring that security requirements were understood, implemented, evidenced, and embedded into business operations.',
+    title: 'Supporting a Cloud Enterprise in Achieving ISO/IEC 27001 Certification',
+    challenge: 'The organization needed to establish a comprehensive Information Security Management System (ISMS), align policies across global engineering teams, remediate technical control gaps, and achieve ISO/IEC 27001 certification to win tier-1 enterprise contracts.',
     steps: [
-      { num: '01', title: 'Gap Assessment', desc: 'Assessed the existing environment against ISO/IEC 27001 requirements and identified key compliance and security gaps.' },
-      { num: '02', title: 'Risk Management', desc: 'Supported the identification, assessment, treatment, and documentation of information security risks.' },
-      { num: '03', title: 'ISMS Development', desc: 'Developed and strengthened the required policies, procedures, governance structure, roles, and ISMS documentation.' },
-      { num: '04', title: 'Control Implementation', desc: 'Worked with relevant teams to address gaps and implement applicable security controls across the organization.' },
-      { num: '05', title: 'Audit Readiness', desc: 'Reviewed evidence, assessed implementation readiness, and helped teams prepare for the certification audit.' },
-      { num: '06', title: 'Certification Support', desc: 'Supported the organization throughout its certification journey and helped address observations and improvement areas.' },
+      { num: '01', title: 'Gap Assessment & Scoping', desc: 'Assessed existing infrastructure and workflows against ISO 27001 requirements, mapping all technical and procedural gaps.' },
+      { num: '02', title: 'Risk Assessment & Treatment', desc: 'Implemented an asset-based risk management methodology, quantifying likelihood, impact, and treatment plans.' },
+      { num: '03', title: 'ISMS Governance & Policies', desc: 'Authored and institutionalized 24+ mandatory policies, procedures, Statement of Applicability (SoA), and governance charters.' },
+      { num: '04', title: 'Control Engineering', desc: 'Collaborated with DevOps and IT to enforce technical controls including IAM least privilege, encryption, and logging.' },
+      { num: '05', title: 'Internal Audit & Pre-Assessment', desc: 'Conducted a rigorous internal audit, identified non-conformities, and facilitated leadership management reviews.' },
+      { num: '06', title: 'Certification Audit Support', desc: 'Guided the client through Stage 1 and Stage 2 certification audits with zero major non-conformities.' },
     ],
-    result: 'ISO/IEC 27001 Certification Achieved',
+    result: 'ISO/IEC 27001 Certification Achieved with Zero Major Non-Conformities',
+    certifications: ['ISO/IEC 27001', 'ISMS Certified', 'Zero Non-Conformities'],
   },
   {
     id: 2,
-    badge: 'Multi-Framework',
+    badge: 'Multi-Framework GRC',
     location: 'United Kingdom',
-    industry: 'Technology',
+    industry: 'Financial Technology & SaaS',
     image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1200&q=80',
-    title: 'Supporting a Technology Company to Strengthen Its Security & Compliance Program',
-    challenge: 'The organization needed to strengthen its security governance and demonstrate compliance against multiple internationally recognized security frameworks.',
+    title: 'Integrated Multi-Framework GRC Architecture: ISO 27001, SOC 2 & PCI DSS',
+    challenge: 'A rapidly scaling FinTech organization required simultaneous compliance across ISO 27001, SOC 2 Type II, and PCI DSS v4.0 to satisfy institutional investors and banking partners without duplicating operational overhead.',
     steps: [
-      { num: '01', title: 'Gap Assessments', desc: 'Conducted gap assessments against each target framework to identify compliance and security gaps.' },
-      { num: '02', title: 'Risk Assessments', desc: 'Performed risk assessments and developed risk treatment plans aligned with each framework.' },
-      { num: '03', title: 'Policy Development', desc: 'Developed and updated security policies, procedures, and governance documentation.' },
-      { num: '04', title: 'Control Implementation', desc: 'Implemented security controls across the organization aligned with all target frameworks.' },
-      { num: '05', title: 'Evidence Preparation', desc: 'Prepared evidence packages and audit readiness materials for each certification.' },
-      { num: '06', title: 'Audit Support', desc: 'Supported the organization through all certification and assessment processes.' },
+      { num: '01', title: 'Unified Control Mapping', desc: 'Built a consolidated control framework mapping overlapping controls across ISO 27001, SOC 2, and PCI DSS.' },
+      { num: '02', title: 'Evidence Automation', desc: 'Streamlined continuous evidence collection across AWS cloud environments, GitHub pipelines, and HR systems.' },
+      { num: '03', title: 'Third-Party Risk (TPRM)', desc: 'Engineered a vendor risk management framework assessing cloud providers, APIs, and SaaS dependencies.' },
+      { num: '04', title: 'VAPT & Threat Modeling', desc: 'Conducted penetration testing on web applications and payment APIs, remediating critical vulnerabilities.' },
+      { num: '05', title: 'SOC 2 Type II Observation', desc: 'Monitored controls over a 6-month observation window to validate operating effectiveness.' },
+      { num: '06', title: 'Audit Facilitation', desc: 'Coordinated external auditors across all three assessments, delivering clean compliance reports.' },
     ],
-    result: 'ISO 27001, SOC 2 Type II, PCI DSS, Cyber Essentials Plus — All Achieved',
-    certifications: ['ISO/IEC 27001', 'SOC 2 Type II', 'PCI DSS', 'Cyber Essentials', 'Cyber Essentials Plus'],
+    result: 'ISO 27001, SOC 2 Type II, and PCI DSS Certifications Achieved',
+    certifications: ['ISO/IEC 27001', 'SOC 2 Type II', 'PCI DSS v4.0', 'Cyber Essentials Plus'],
   },
   {
     id: 3,
-    badge: 'ISO 27001:2022 Transition',
-    location: 'United Kingdom',
-    industry: 'Technology',
+    badge: 'AI Governance & NIST AI RMF',
+    location: 'United States',
+    industry: 'Enterprise Artificial Intelligence',
     image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1200&q=80',
-    title: 'Successfully Transitioning from ISO/IEC 27001:2013 to ISO/IEC 27001:2022',
-    challenge: 'As ISO/IEC 27001 evolved from the 2013 to the 2022 edition, the organization needed to reassess their ISMS, understand the updated requirements, address new controls, and prepare for transition audits.',
+    title: 'Operationalizing Enterprise AI Governance & NIST AI RMF for a GenAI Platform',
+    challenge: 'A cutting-edge generative AI company needed to institute formal AI governance, demonstrate responsible AI adoption to enterprise customers, and align their LLM pipelines with the NIST AI Risk Management Framework.',
     steps: [
-      { num: '01', title: 'Transition Gap Assessment', desc: 'Conducted a comprehensive ISO 27001:2013 → 2022 gap assessment.' },
-      { num: '02', title: 'Documentation Update', desc: 'Updated ISMS policies, procedures, and documentation to align with the 2022 standard.' },
-      { num: '03', title: 'Risk Enhancement', desc: 'Reviewed and enhanced the risk assessment and risk treatment methodology.' },
-      { num: '04', title: 'Control Mapping', desc: 'Mapped existing controls to the ISO 27001:2022 Annex A control structure.' },
-      { num: '05', title: 'New Controls', desc: 'Implemented requirements for new and updated Annex A controls.' },
-      { num: '06', title: 'Transition Audit Prep', desc: 'Conducted internal readiness and transition audit preparation.' },
+      { num: '01', title: 'AI System Mapping', desc: 'Cataloged all internal LLM pipelines, foundation models, fine-tuning datasets, and third-party AI APIs.' },
+      { num: '02', title: 'NIST AI RMF Governance (Govern)', desc: 'Established AI ethics principles, acceptable use policies, risk tolerance criteria, and human-in-the-loop oversight.' },
+      { num: '03', title: 'AI Risk & Bias Auditing (Measure)', desc: 'Audited models for prompt injection vulnerabilities, hallucination rates, data leakage, and algorithmic fairness.' },
+      { num: '04', title: 'LLM Security Guardrails (Manage)', desc: 'Implemented input/output guardrails, automated PII sanitization, and continuous red-teaming protocols.' },
+      { num: '05', title: 'ISO 42001 Readiness', desc: 'Benchmarked the AI Management System (AIMS) against emerging ISO/IEC 42001 requirements.' },
+      { num: '06', title: 'Transparency Documentation', desc: 'Published AI Model Cards, compliance disclosures, and customer-facing trust center reports.' },
     ],
-    result: 'Successful Transition to ISO/IEC 27001:2022',
+    result: 'NIST AI RMF Alignment & Enterprise AI Trust Framework Certified',
+    certifications: ['NIST AI RMF', 'ISO 42001 Readiness', 'Responsible AI Framework', 'OWASP LLM Compliant'],
   },
   {
     id: 4,
-    badge: 'Multi-Organization',
+    badge: 'Regional Compliance & Transition',
     location: 'Qatar',
-    industry: 'Multiple Industries',
+    industry: 'Energy & Enterprise Sector',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80',
-    title: 'Supporting Multiple Organizations in Qatar Through ISO/IEC 27001:2022 Transition',
-    challenge: 'Multiple organizations in Qatar needed to transition their ISMS from ISO/IEC 27001:2013 to the 2022 edition, each with unique environments, teams, and readiness levels.',
+    title: 'Guiding Enterprise Organizations in Qatar Through ISO 27001:2022 Transitions',
+    challenge: 'Multiple leading organizations in Qatar needed to transition their existing ISMS to the updated ISO/IEC 27001:2022 standard while maintaining alignment with National Information Assurance (NIA) and Personal Data Privacy (PDP) regulations.',
     steps: [
-      { num: '01', title: 'Transition Gap Assessment', desc: 'Assessed existing ISMS environments against ISO/IEC 27001:2022 requirements.' },
-      { num: '02', title: 'ISMS Updates', desc: 'Reviewed and updated policies, procedures, scope, risk documentation, and Statement of Applicability.' },
-      { num: '03', title: 'Control Alignment', desc: 'Mapped existing controls against the updated Annex A structure and identified new requirements.' },
-      { num: '04', title: 'Gap Remediation', desc: 'Worked with control owners to address identified gaps and strengthen implementation.' },
-      { num: '05', title: 'Evidence Review', desc: 'Reviewed implementation evidence and identified areas requiring attention.' },
-      { num: '06', title: 'Transition Preparation', desc: 'Prepared organizations and stakeholders for their ISO/IEC 27001:2022 transition assessments.' },
+      { num: '01', title: 'Transition Gap Assessment', desc: 'Evaluated existing ISMS documentation and technical controls against updated ISO 27001:2022 requirements.' },
+      { num: '02', title: 'Annex A Control Modernization', desc: 'Implemented updated and new controls (threat intelligence, cloud security, data masking, secure coding).' },
+      { num: '03', title: 'Risk & SoA Realignment', desc: 'Restructured the Statement of Applicability (SoA) and enhanced cyber risk treatment methodologies.' },
+      { num: '04', title: 'Regulatory Integration', desc: 'Harmonized ISMS controls with Qatar National Cyber Security Agency (NCSA) NIA guidelines.' },
+      { num: '05', title: 'Stakeholder & Team Training', desc: 'Conducted executive briefings and operational training on updated security control responsibilities.' },
+      { num: '06', title: 'Transition Audit Success', desc: 'Guided client organizations through transition certification audits with 100% success.' },
     ],
-    result: 'Successful ISO/IEC 27001:2022 Transitions for Multiple Organizations',
+    result: '100% Successful ISO/IEC 27001:2022 Transitions Across All Client Orgs',
+    certifications: ['ISO/IEC 27001:2022', 'Qatar NIA Aligned', 'PDP Compliance'],
   },
 ];
 
@@ -85,10 +88,10 @@ export function caseStudiesPage() {
       <div class="container">
         <div class="section-label">
           <span class="label-dot"></span>
-          <span>Case Studies</span>
+          <span>Case Studies & Track Record</span>
         </div>
-        <h1>Proven <span class="text-gradient">Security Results</span></h1>
-        <p>Real-world success stories showcasing how Xecure AI helps organizations achieve compliance, strengthen security, and reduce cyber risk.</p>
+        <h1>Proven <span class="text-gradient">GRC & Security Results</span></h1>
+        <p>Explore how XecureAI partners with global organizations to achieve audit certification, manage cyber risk, and govern enterprise AI responsibly.</p>
       </div>
     </section>
 
@@ -119,7 +122,7 @@ export function caseStudiesPage() {
               ` : ''}
 
               <div class="case-study-detail">
-                <h4>How Xecure AI Helped</h4>
+                <h4>How XecureAI Delivered Results</h4>
                 <div class="case-study-steps">
                   ${cs.steps.map(step => `
                     <div class="case-study-step">
@@ -148,12 +151,15 @@ export function caseStudiesPage() {
           <div class="cta-bg"></div>
           <div class="glow-shape glow-shape--blue" style="width:300px;height:300px;top:-20%;left:20%;"></div>
           <div style="position:relative;z-index:1;">
-            <h2 class="cta-title text-h2">Ready to Be Our <span class="text-gradient">Next Success Story?</span></h2>
-            <p class="cta-subtitle text-body-lg">Let us help your organization achieve its security and compliance goals.</p>
-            <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
-              Start Your Journey
-              ${icon('arrowRight', 18)}
-            </a>
+            <h2 class="cta-title text-h2">Ready to Achieve <span class="text-gradient">Compliance Certainty?</span></h2>
+            <p class="cta-subtitle text-body-lg">Partner with XecureAI to fast-track your ISO 27001, SOC 2, or AI Governance initiative.</p>
+            <div style="display:flex;gap:var(--space-4);justify-content:center;flex-wrap:wrap;">
+              <a href="mailto:support@xecureai.com?subject=Case Study Consultation - XecureAI" class="btn btn-glass btn-lg">
+                Schedule Advisory Call
+                ${icon('arrowRight', 18)}
+              </a>
+              <a href="#/services" data-route="/services" class="btn btn-outline btn-lg">Explore Services</a>
+            </div>
           </div>
         </div>
       </div>

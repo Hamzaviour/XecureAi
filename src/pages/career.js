@@ -5,46 +5,46 @@ import { icon } from '../js/icons.js';
 
 const positions = [
   {
-    title: 'Senior Security Analyst',
-    department: 'Cybersecurity',
+    title: 'Lead GRC Consultant & ISO 27001 Auditor',
+    department: 'GRC & Compliance',
     location: 'Remote / Qatar',
     type: 'Full-time',
-    tags: ['SIEM', 'Incident Response', 'Threat Analysis', 'SOC'],
+    tags: ['ISO 27001:2022', 'SOC 2 Type II', 'ISMS Auditing', 'Risk Treatment'],
   },
   {
-    title: 'Penetration Tester',
-    department: 'Cyber Defense',
+    title: 'AI Governance & Ethics Specialist',
+    department: 'AI Governance',
+    location: 'Remote / United States',
+    type: 'Full-time',
+    tags: ['ISO/IEC 42001', 'NIST AI RMF', 'Algorithmic Audits', 'Responsible AI'],
+  },
+  {
+    title: 'Senior Penetration Tester & Red Teamer',
+    department: 'Cybersecurity',
     location: 'Remote / Pakistan',
     type: 'Full-time',
-    tags: ['Web App Testing', 'Network Pentesting', 'API Security', 'Red Team'],
+    tags: ['VAPT', 'API Security', 'Cloud Pentesting', 'OWASP Top 10'],
   },
   {
-    title: 'AI Security Engineer',
-    department: 'AI Security',
+    title: 'Generative AI & LLM Security Engineer',
+    department: 'AI Governance & Security',
     location: 'Remote / United States',
     type: 'Full-time',
-    tags: ['LLM Security', 'AI Risk', 'ML Pipelines', 'Prompt Injection'],
+    tags: ['OWASP LLM', 'Prompt Injection', 'RAG Security', 'Guardrails'],
   },
   {
-    title: 'GRC Consultant',
-    department: 'Cyber Risk',
+    title: 'Senior Cloud Security Architect',
+    department: 'Cybersecurity',
     location: 'Remote / Qatar',
     type: 'Full-time',
-    tags: ['ISO 27001', 'SOC 2', 'PCI DSS', 'Risk Assessment'],
+    tags: ['AWS', 'Azure', 'CSPM', 'Zero Trust IAM', 'Kubernetes'],
   },
   {
-    title: 'SOC Analyst — L2',
-    department: 'Cyber Defense',
-    location: 'Qatar',
+    title: 'Cyber Risk & Third-Party Risk (TPRM) Analyst',
+    department: 'GRC & Compliance',
+    location: 'Remote / Pakistan',
     type: 'Full-time',
-    tags: ['SIEM', 'MDR', 'Threat Hunting', 'Incident Triage'],
-  },
-  {
-    title: 'Cloud Security Engineer',
-    department: 'Cybersecurity',
-    location: 'Remote / United States',
-    type: 'Full-time',
-    tags: ['AWS', 'Azure', 'CSPM', 'Container Security'],
+    tags: ['FAIR Methodology', 'Vendor Risk', 'SIG Questionnaires', 'Risk Registers'],
   },
 ];
 
@@ -54,32 +54,32 @@ export function careerPage() {
       <div class="container">
         <div class="section-label">
           <span class="label-dot"></span>
-          <span>Careers</span>
+          <span>Careers at XecureAI</span>
         </div>
-        <h1>Join the Future of <span class="text-gradient">Cybersecurity</span></h1>
-        <p>Build your career at the intersection of cybersecurity and artificial intelligence. Help organizations around the world defend their digital future.</p>
+        <h1>Shape the Future of <span class="text-gradient">GRC & AI Governance</span></h1>
+        <p>Build your career at the forefront of enterprise cybersecurity, regulatory compliance, and responsible AI governance.</p>
       </div>
     </section>
 
-    <!-- Why Xecure AI -->
+    <!-- Why XecureAI -->
     <section class="section">
       <div class="container">
         <div class="section-header reveal">
           <div class="section-label">
             <span class="label-dot"></span>
-            <span>Why Xecure AI</span>
+            <span>Why Join XecureAI</span>
           </div>
-          <h2 class="section-title text-reveal">Why Work With Us</h2>
-          <p class="section-subtitle">At Xecure AI, you'll work on real-world security challenges that matter, alongside talented professionals who are passionate about protecting the digital world.</p>
+          <h2 class="section-title text-reveal">Why Build Your Career With Us</h2>
+          <p class="section-subtitle">Work with top-tier global clients on pivotal security transformations, international standard certifications, and cutting-edge AI governance initiatives.</p>
         </div>
         <div class="benefits-grid stagger-children">
           ${[
-            { ic: 'globe', title: 'Global Impact', desc: 'Protect organizations across 3 continents.' },
-            { ic: 'cpu', title: 'Cutting-Edge Tech', desc: 'Work with AI, ML, and advanced security tools.' },
-            { ic: 'bookOpen', title: 'Continuous Learning', desc: 'Certifications, training, and conference support.' },
-            { ic: 'home', title: 'Remote Flexibility', desc: 'Work from anywhere with flexible schedules.' },
-            { ic: 'trendingUp', title: 'Career Growth', desc: 'Clear advancement paths and mentorship.' },
-            { ic: 'users', title: 'Collaborative Culture', desc: 'A team that values integrity and innovation.' },
+            { ic: 'globe', title: 'Global Advisory Impact', desc: 'Advise enterprise and government clients across Qatar, North America, and South Asia.' },
+            { ic: 'cpu', title: 'Pioneering AI Practice', desc: 'Work directly on ISO 42001 and NIST AI Risk Management Framework implementations.' },
+            { ic: 'bookOpen', title: 'Professional Certifications', desc: 'Full company sponsorship for CISSP, CISA, ISO Lead Auditor, and CCSP certifications.' },
+            { ic: 'home', title: 'Remote-First Flexibility', desc: 'Collaborate with distributed global teams with flexible working schedules.' },
+            { ic: 'trendingUp', title: 'Accelerated Leadership', desc: 'Fast-track career advancement from practitioner to practice leader.' },
+            { ic: 'users', title: 'Culture of Excellence', desc: 'A collaborative, integrity-driven team passionate about governance and security.' },
           ].map(b => `
             <div class="card benefit-item">
               <div class="benefit-icon">${icon(b.ic, 28, 'var(--cyber-blue)')}</div>
@@ -99,10 +99,10 @@ export function careerPage() {
         <div class="section-header reveal">
           <div class="section-label">
             <span class="label-dot"></span>
-            <span>Open Positions</span>
+            <span>Open Opportunities</span>
           </div>
-          <h2 class="section-title">Current <span class="text-gradient">Opportunities</span></h2>
-          <p class="section-subtitle">Explore our open roles and find your place in the Xecure AI team.</p>
+          <h2 class="section-title">Current Advisory & <span class="text-gradient">Technical Openings</span></h2>
+          <p class="section-subtitle">Explore open roles across our GRC, AI Governance, and Cybersecurity practices.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:var(--space-4);" class="stagger-children">
           ${positions.map(pos => `
@@ -135,10 +135,10 @@ export function careerPage() {
           <div class="cta-bg"></div>
           <div class="glow-shape glow-shape--purple" style="width:300px;height:300px;top:-20%;left:30%;"></div>
           <div style="position:relative;z-index:1;">
-            <h2 class="cta-title text-h2">Don't See Your <span class="text-gradient-purple">Role?</span></h2>
-            <p class="cta-subtitle text-body-lg">We're always looking for talented security professionals. Send us your resume.</p>
-            <a href="mailto:support@xecureai.com" class="btn btn-glass btn-lg">
-              Send Your Resume
+            <h2 class="cta-title text-h2">Don't See Your <span class="text-gradient-purple">Exact Match?</span></h2>
+            <p class="cta-subtitle text-body-lg">We are always eager to connect with exceptional GRC auditors, AI ethicists, and cybersecurity engineers. Send us your CV.</p>
+            <a href="mailto:support@xecureai.com?subject=General Career Inquiry - XecureAI" class="btn btn-glass btn-lg">
+              Submit General Application
               ${icon('arrowRight', 18)}
             </a>
           </div>
