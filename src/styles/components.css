@@ -53,6 +53,12 @@
   background: transparent;
   background-color: transparent;
   border: none;
+  transition: filter var(--transition-base), transform var(--transition-base);
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.45));
 }
 
 .logo-text {
