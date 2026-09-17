@@ -17,23 +17,25 @@ export function initConsultModal() {
               </svg>
             </button>
 
+            <!-- Form View -->
             <div class="modal-body-content" id="modal-form-view">
               <div class="modal-header">
                 <div class="modal-badge">
                   <span class="pulse-dot"></span>
-                  <span>Direct Advisory Session</span>
+                  <span>Advisory Session</span>
                 </div>
                 <h2 id="consult-modal-title" class="modal-title">Schedule a Consultation</h2>
-                <p class="modal-subtitle">Connect with our GRC, AI governance & cybersecurity specialists to benchmark posture and define your roadmap.</p>
+                <p class="modal-subtitle">Benchmark your posture, prepare for audits, and build secure AI with our senior advisory team.</p>
               </div>
 
               <form class="modal-form" id="consult-form" novalidate>
+                <!-- Row 1: Name & Work Email -->
                 <div class="form-row">
                   <div class="form-group">
                     <label for="consult-name" class="form-label">Full Name <span class="required">*</span></label>
                     <div class="input-wrapper">
                       <svg class="input-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                      <input type="text" id="consult-name" name="name" class="form-input" placeholder="e.g. Alex Rivera" required autocomplete="name" />
+                      <input type="text" id="consult-name" name="name" class="form-input" placeholder="Alex Rivera" required autocomplete="name" />
                     </div>
                     <span class="form-error" id="name-error">Please enter your name</span>
                   </div>
@@ -48,6 +50,7 @@ export function initConsultModal() {
                   </div>
                 </div>
 
+                <!-- Row 2: Company & Area of Focus -->
                 <div class="form-row">
                   <div class="form-group">
                     <label for="consult-company" class="form-label">Company / Organization</label>
@@ -64,7 +67,7 @@ export function initConsultModal() {
                       <select id="consult-topic" name="topic" class="form-select">
                         <option value="GRC & Compliance (ISO 27001, SOC 2, HIPAA)">GRC & Compliance (ISO 27001, SOC 2)</option>
                         <option value="AI Governance & Safety (NIST AI RMF, ISO 42001)">AI Governance & Safety (ISO 42001)</option>
-                        <option value="Cybersecurity & Penetration Testing">Cybersecurity & Penetration Testing</option>
+                        <option value="Cybersecurity & Penetration Testing">Cybersecurity & Pen Testing</option>
                         <option value="Cloud Security Architecture">Cloud Security Architecture</option>
                         <option value="General Executive Advisory">General Executive Advisory</option>
                       </select>
@@ -73,28 +76,33 @@ export function initConsultModal() {
                   </div>
                 </div>
 
+                <!-- Row 3: Project Notes -->
                 <div class="form-group">
-                  <label for="consult-message" class="form-label">Project Details / Goals (Optional)</label>
+                  <label for="consult-message" class="form-label">Project Details / Target Timeline <span class="optional-tag">(Optional)</span></label>
                   <textarea id="consult-message" name="message" class="form-textarea" rows="2" placeholder="Briefly describe your objectives, target audit dates, or specific questions..."></textarea>
                 </div>
 
+                <!-- Submit Button -->
                 <div class="modal-actions">
                   <button type="submit" class="btn btn-primary btn-submit" id="consult-submit-btn">
                     <span class="btn-text">Confirm Consultation Request</span>
                     <span class="btn-loading" style="display:none;">
                       <svg class="spinner" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10"/></svg>
-                      Sending...
+                      Sending Request...
                     </span>
                     <svg class="btn-arrow" viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path fill-rule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clip-rule="evenodd"/></svg>
                   </button>
                 </div>
 
+                <!-- Trust / Response Footer -->
                 <div class="modal-footer-info">
-                  <span class="secure-tag">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                    <span>Strictly confidential under mutual NDA</span>
-                  </span>
-                  <span class="response-tag">⚡ Response in &lt; 24h</span>
+                  <div class="secure-tag">
+                    <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                    <span>Confidential under mutual NDA</span>
+                  </div>
+                  <div class="response-tag">
+                    <span>⚡ Guaranteed response within 24h</span>
+                  </div>
                 </div>
               </form>
             </div>
@@ -102,7 +110,7 @@ export function initConsultModal() {
             <!-- Success Card -->
             <div class="modal-success" id="modal-success-view" style="display: none;">
               <div class="success-icon-badge">
-                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                   <polyline points="22 4 12 14.01 9 11.01"></polyline>
                 </svg>
@@ -113,7 +121,7 @@ export function initConsultModal() {
               </p>
               <div class="success-actions">
                 <button type="button" class="btn btn-primary btn-sm modal-done-btn" id="modal-done-btn">Done</button>
-                <a href="mailto:support@xecureai.com" class="btn btn-glass btn-sm">Direct Email</a>
+                <a href="mailto:support@xecureai.com" class="btn btn-glass btn-sm">Email Support</a>
               </div>
             </div>
           </div>
@@ -216,7 +224,7 @@ export function initConsultModal() {
 
     if (!isValid) return;
 
-    // Simulate swift submission
+    // Simulate submission
     if (submitBtn) {
       submitBtn.disabled = true;
       const btnText = submitBtn.querySelector('.btn-text');
