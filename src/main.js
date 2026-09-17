@@ -10,6 +10,7 @@ import { initScrollReveal } from './js/scroll-reveal.js';
 import { initThemeToggle } from './js/theme-toggle.js';
 import { initMenu } from './js/menu.js';
 import { initStickyCTA } from './js/sticky-cta.js';
+import { initConsultModal } from './js/consult-modal.js';
 
 import { homePage } from './pages/home.js';
 import { servicesPage } from './pages/services.js';
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initMenu();
   initStickyCTA();
+  initConsultModal();
 
   // Init router
   initRouter(app);
